@@ -4,6 +4,7 @@ using namespace std;
 int volume(int height, int width, int length);
 
 int main() {
+    int  height, width, length ;
     int box1Height, box1Width, box1Length;
     int box2Height, box2Width, box2Length;
     int totalVolume, totalSurface;
@@ -22,12 +23,21 @@ int main() {
     cout << "Enter Box 2 Length : ";
     cin >> box2Length;
     
-    totalVolume = volume(box1Height, box1Width, box1Length)
+   totalVolume = volume(box1Height, box1Width, box1Length)
              + volume(box2Height, box2Width, box2Length);
              
     cout << "Volume of Box is " << totalVolume << endl;
     
     return 0;
-}
+}//end function main1
 
 // Implement the Volume() function here
+int volume(int height, int width, int length) {
+
+int  totalVolume ,box1Height, box1Width, box1Length ,
+             box2Height, box2Width, box2Length ;
+
+  totalVolume = (box1Height * box1Width * box1Length) +       (box2Height * box2Width * box2Length) ;
+
+  return totalVolume ;           
+}
